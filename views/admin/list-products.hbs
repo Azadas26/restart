@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="m-auto">
+            <a href="/admin/add" class="btn btn-success mt-3">Add_products</a>
+        </div>
+        <div class="col-md-12">
+            <table class="table mt-5" style="text-align: center;">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Discription</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each products}}
+                    <tr>
+                        <td>{{@index}}</td>
+                        <td>{{this.name}}</td>
+                        <td>{{this.discription}}</td>
+                        <td>{{this.price}}</td>
+                        <td><img src="{{this.image}}" alt="" style="width: 200px; height: 200px;"></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
